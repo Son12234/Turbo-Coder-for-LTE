@@ -1,0 +1,2664 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Sun Oct 25 14:00:16 2026
+| Host         : DINHSON running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file turbo_demo_top_timing_summary_routed.rpt -pb turbo_demo_top_timing_summary_routed.pb -rpx turbo_demo_top_timing_summary_routed.rpx -warn_on_violation
+| Design       : turbo_demo_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule     Severity  Description                                 Violations  
+-------  --------  ------------------------------------------  ----------  
+SYNTH-6  Warning   Timing of a RAM block might be sub-optimal  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (5)
+6. checking no_output_delay (16)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (5)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 5 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (16)
+--------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 16 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.313        0.000                      0                  590        0.105        0.000                      0                  590        4.500        0.000                       0                   221  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         2.313        0.000                      0                  590        0.105        0.000                      0                  590        4.500        0.000                       0                   221  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)        sys_clk_pin                 
+(none)                      sys_clk_pin   
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.313ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.105ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.313ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.760ns  (logic 3.141ns (40.478%)  route 4.619ns (59.522%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.842ns = ( 14.842 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.750    12.500    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y83         LUT5 (Prop_lut5_I1_O)        0.329    12.829 r  u_enc/u_qpp/g[2]_i_1/O
+                         net (fo=1, routed)           0.000    12.829    u_enc/u_qpp/g[2]_i_1_n_0
+    SLICE_X60Y83         FDRE                                         r  u_enc/u_qpp/g_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.501    14.842    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y83         FDRE                                         r  u_enc/u_qpp/g_reg[2]/C
+                         clock pessimism              0.258    15.100    <hidden>
+                         clock uncertainty           -0.035    15.065    <hidden>
+    SLICE_X60Y83         FDRE (Setup_fdre_C_D)        0.077    15.142    u_enc/u_qpp/g_reg[2]
+  -------------------------------------------------------------------
+                         required time                         15.142    <hidden>
+                         arrival time                         -12.829    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.313    <hidden>
+
+Slack (MET) :             2.320ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.757ns  (logic 3.141ns (40.494%)  route 4.616ns (59.506%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.842ns = ( 14.842 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.747    12.497    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y83         LUT5 (Prop_lut5_I1_O)        0.329    12.826 r  u_enc/u_qpp/g[3]_i_1/O
+                         net (fo=1, routed)           0.000    12.826    u_enc/u_qpp/g[3]_i_1_n_0
+    SLICE_X60Y83         FDRE                                         r  u_enc/u_qpp/g_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.501    14.842    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y83         FDRE                                         r  u_enc/u_qpp/g_reg[3]/C
+                         clock pessimism              0.258    15.100    <hidden>
+                         clock uncertainty           -0.035    15.065    <hidden>
+    SLICE_X60Y83         FDRE (Setup_fdre_C_D)        0.081    15.146    u_enc/u_qpp/g_reg[3]
+  -------------------------------------------------------------------
+                         required time                         15.146    <hidden>
+                         arrival time                         -12.826    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.320    <hidden>
+
+Slack (MET) :             2.327ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.750ns  (logic 3.141ns (40.527%)  route 4.609ns (59.473%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.032ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.843ns = ( 14.843 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.741    12.490    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y84         LUT5 (Prop_lut5_I1_O)        0.329    12.819 r  u_enc/u_qpp/g[5]_i_1/O
+                         net (fo=1, routed)           0.000    12.819    u_enc/u_qpp/g[5]_i_1_n_0
+    SLICE_X60Y84         FDRE                                         r  u_enc/u_qpp/g_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.502    14.843    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y84         FDRE                                         r  u_enc/u_qpp/g_reg[5]/C
+                         clock pessimism              0.258    15.101    <hidden>
+                         clock uncertainty           -0.035    15.066    <hidden>
+    SLICE_X60Y84         FDRE (Setup_fdre_C_D)        0.081    15.147    u_enc/u_qpp/g_reg[5]
+  -------------------------------------------------------------------
+                         required time                         15.147    <hidden>
+                         arrival time                         -12.819    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.327    <hidden>
+
+Slack (MET) :             2.353ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.721ns  (logic 3.141ns (40.683%)  route 4.580ns (59.317%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.032ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.843ns = ( 14.843 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.711    12.461    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y84         LUT5 (Prop_lut5_I1_O)        0.329    12.790 r  u_enc/u_qpp/g[4]_i_1/O
+                         net (fo=1, routed)           0.000    12.790    u_enc/u_qpp/g[4]_i_1_n_0
+    SLICE_X60Y84         FDRE                                         r  u_enc/u_qpp/g_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.502    14.843    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y84         FDRE                                         r  u_enc/u_qpp/g_reg[4]/C
+                         clock pessimism              0.258    15.101    <hidden>
+                         clock uncertainty           -0.035    15.066    <hidden>
+    SLICE_X60Y84         FDRE (Setup_fdre_C_D)        0.077    15.143    u_enc/u_qpp/g_reg[4]
+  -------------------------------------------------------------------
+                         required time                         15.143    <hidden>
+                         arrival time                         -12.790    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.353    <hidden>
+
+Slack (MET) :             2.387ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.691ns  (logic 3.141ns (40.839%)  route 4.550ns (59.161%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.682    12.431    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y85         LUT5 (Prop_lut5_I1_O)        0.329    12.760 r  u_enc/u_qpp/g[7]_i_1/O
+                         net (fo=1, routed)           0.000    12.760    u_enc/u_qpp/g[7]_i_1_n_0
+    SLICE_X60Y85         FDRE                                         r  u_enc/u_qpp/g_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.503    14.844    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y85         FDRE                                         r  u_enc/u_qpp/g_reg[7]/C
+                         clock pessimism              0.258    15.102    <hidden>
+                         clock uncertainty           -0.035    15.067    <hidden>
+    SLICE_X60Y85         FDRE (Setup_fdre_C_D)        0.081    15.148    u_enc/u_qpp/g_reg[7]
+  -------------------------------------------------------------------
+                         required time                         15.148    <hidden>
+                         arrival time                         -12.760    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.387    <hidden>
+
+Slack (MET) :             2.411ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.666ns  (logic 3.141ns (40.974%)  route 4.525ns (59.026%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.657    12.406    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y85         LUT5 (Prop_lut5_I1_O)        0.329    12.735 r  u_enc/u_qpp/g[9]_i_1/O
+                         net (fo=1, routed)           0.000    12.735    u_enc/u_qpp/g[9]_i_1_n_0
+    SLICE_X60Y85         FDRE                                         r  u_enc/u_qpp/g_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.503    14.844    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y85         FDRE                                         r  u_enc/u_qpp/g_reg[9]/C
+                         clock pessimism              0.258    15.102    <hidden>
+                         clock uncertainty           -0.035    15.067    <hidden>
+    SLICE_X60Y85         FDRE (Setup_fdre_C_D)        0.079    15.146    u_enc/u_qpp/g_reg[9]
+  -------------------------------------------------------------------
+                         required time                         15.146    <hidden>
+                         arrival time                         -12.735    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.411    <hidden>
+
+Slack (MET) :             2.417ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.608ns  (logic 3.141ns (41.288%)  route 4.467ns (58.712%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.842ns = ( 14.842 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.598    12.347    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X59Y83         LUT5 (Prop_lut5_I1_O)        0.329    12.676 r  u_enc/u_qpp/g[1]_i_1/O
+                         net (fo=1, routed)           0.000    12.676    u_enc/u_qpp/g[1]_i_1_n_0
+    SLICE_X59Y83         FDRE                                         r  u_enc/u_qpp/g_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.501    14.842    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X59Y83         FDRE                                         r  u_enc/u_qpp/g_reg[1]/C
+                         clock pessimism              0.258    15.100    <hidden>
+                         clock uncertainty           -0.035    15.065    <hidden>
+    SLICE_X59Y83         FDRE (Setup_fdre_C_D)        0.029    15.094    u_enc/u_qpp/g_reg[1]
+  -------------------------------------------------------------------
+                         required time                         15.094    <hidden>
+                         arrival time                         -12.676    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.417    <hidden>
+
+Slack (MET) :             2.422ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.605ns  (logic 3.141ns (41.304%)  route 4.464ns (58.696%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.842ns = ( 14.842 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.595    12.344    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X59Y83         LUT5 (Prop_lut5_I1_O)        0.329    12.673 r  u_enc/u_qpp/g[0]_i_1/O
+                         net (fo=1, routed)           0.000    12.673    u_enc/u_qpp/g[0]_i_1_n_0
+    SLICE_X59Y83         FDRE                                         r  u_enc/u_qpp/g_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.501    14.842    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X59Y83         FDRE                                         r  u_enc/u_qpp/g_reg[0]/C
+                         clock pessimism              0.258    15.100    <hidden>
+                         clock uncertainty           -0.035    15.065    <hidden>
+    SLICE_X59Y83         FDRE (Setup_fdre_C_D)        0.031    15.096    u_enc/u_qpp/g_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.096    <hidden>
+                         arrival time                         -12.673    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.422    <hidden>
+
+Slack (MET) :             2.478ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.601ns  (logic 3.141ns (41.324%)  route 4.460ns (58.676%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.592    12.341    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X60Y86         LUT6 (Prop_lut6_I0_O)        0.329    12.670 r  u_enc/u_qpp/g[10]_i_1/O
+                         net (fo=1, routed)           0.000    12.670    u_enc/u_qpp/g[10]_i_1_n_0
+    SLICE_X60Y86         FDRE                                         r  u_enc/u_qpp/g_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.503    14.844    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X60Y86         FDRE                                         r  u_enc/u_qpp/g_reg[10]/C
+                         clock pessimism              0.258    15.102    <hidden>
+                         clock uncertainty           -0.035    15.067    <hidden>
+    SLICE_X60Y86         FDRE (Setup_fdre_C_D)        0.081    15.148    u_enc/u_qpp/g_reg[10]
+  -------------------------------------------------------------------
+                         required time                         15.148    <hidden>
+                         arrival time                         -12.670    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.478    <hidden>
+
+Slack (MET) :             2.482ns  (required time - arrival time)
+  Source:                 u_enc/k_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_qpp/g_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.545ns  (logic 3.141ns (41.633%)  route 4.404ns (58.367%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.548     5.069    u_enc/clk_IBUF_BUFG
+    SLICE_X56Y81         FDRE                                         r  u_enc/k_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y81         FDRE (Prop_fdre_C_Q)         0.518     5.587 f  u_enc/k_reg_reg[10]/Q
+                         net (fo=55, routed)          1.783     7.370    u_enc/u_qpp/inc_reg[12]_0[4]
+    SLICE_X64Y84         LUT2 (Prop_lut2_I1_O)        0.150     7.520 f  u_enc/u_qpp/mod_add1_carry_i_9/O
+                         net (fo=2, routed)           0.819     8.339    u_enc/u_qpp/mod_add1_carry_i_9_n_0
+    SLICE_X64Y86         LUT6 (Prop_lut6_I1_O)        0.328     8.667 r  u_enc/u_qpp/inc[4]_i_2/O
+                         net (fo=3, routed)           0.710     9.377    u_enc/u_qpp/mod_add1_carry_i_6_n_0
+    SLICE_X63Y82         LUT5 (Prop_lut5_I4_O)        0.124     9.501 r  u_enc/u_qpp/i__carry_i_9/O
+                         net (fo=1, routed)           0.000     9.501    u_enc/u_qpp/i__carry_i_9_n_0
+    SLICE_X63Y82         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.902 r  u_enc/u_qpp/i__carry_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.902    u_enc/u_qpp/i__carry_i_1__0_n_0
+    SLICE_X63Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.236 r  u_enc/u_qpp/i__carry__0_i_1__0/O[1]
+                         net (fo=3, routed)           0.556    10.792    u_enc/u_qpp/p_1_in6_out[5]
+    SLICE_X62Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.686    11.478 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    11.478    u_enc/u_qpp/mod_add1_inferred__1/i__carry__0_n_0
+    SLICE_X62Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.592 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.592    u_enc/u_qpp/mod_add1_inferred__1/i__carry__1_n_0
+    SLICE_X62Y86         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.749 r  u_enc/u_qpp/mod_add1_inferred__1/i__carry__2/CO[1]
+                         net (fo=13, routed)          0.535    12.284    u_enc/u_qpp/mod_add1_inferred__1/i__carry__2_n_2
+    SLICE_X61Y85         LUT5 (Prop_lut5_I1_O)        0.329    12.613 r  u_enc/u_qpp/g[6]_i_1/O
+                         net (fo=1, routed)           0.000    12.613    u_enc/u_qpp/g[6]_i_1_n_0
+    SLICE_X61Y85         FDRE                                         r  u_enc/u_qpp/g_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    W5                                                0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.503    14.844    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X61Y85         FDRE                                         r  u_enc/u_qpp/g_reg[6]/C
+                         clock pessimism              0.258    15.102    <hidden>
+                         clock uncertainty           -0.035    15.067    <hidden>
+    SLICE_X61Y85         FDRE (Setup_fdre_C_D)        0.029    15.096    u_enc/u_qpp/g_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.096    <hidden>
+                         arrival time                         -12.613    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  2.482    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.105ns  (arrival time - required time)
+  Source:                 u_enc/u_qpp/addr_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_ram/mem_reg/ADDRBWRADDR[10]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.291ns  (logic 0.128ns (43.962%)  route 0.163ns (56.038%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.497ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.562     1.445    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X57Y86         FDRE                                         r  u_enc/u_qpp/addr_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y86         FDRE (Prop_fdre_C_Q)         0.128     1.573 r  u_enc/u_qpp/addr_reg[9]/Q
+                         net (fo=3, routed)           0.163     1.736    u_enc/u_ram/Q[9]
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/ADDRBWRADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.872     2.000    u_enc/u_ram/clk_IBUF_BUFG
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/CLKBWRCLK
+                         clock pessimism             -0.497     1.503    <hidden>
+    RAMB18_X2Y34         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[10])
+                                                      0.129     1.632    u_enc/u_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         -1.632    <hidden>
+                         arrival time                           1.736    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.105    <hidden>
+
+Slack (MET) :             0.126ns  (arrival time - required time)
+  Source:                 lfsr_reg[21]/C
+                            (rising edge-triggered cell FDSE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lfsr_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.985ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.589     1.472    clk_IBUF_BUFG
+    SLICE_X61Y87         FDSE                                         r  lfsr_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y87         FDSE (Prop_fdse_C_Q)         0.141     1.613 r  lfsr_reg[21]/Q
+                         net (fo=1, routed)           0.056     1.669    lfsr__0[21]
+    SLICE_X61Y87         FDRE                                         r  lfsr_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.858     1.985    clk_IBUF_BUFG
+    SLICE_X61Y87         FDRE                                         r  lfsr_reg[20]/C
+                         clock pessimism             -0.513     1.472    <hidden>
+    SLICE_X61Y87         FDRE (Hold_fdre_C_D)         0.071     1.543    lfsr_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -1.543    <hidden>
+                         arrival time                           1.669    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.126    <hidden>
+
+Slack (MET) :             0.130ns  (arrival time - required time)
+  Source:                 u_enc/u_qpp/addr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_ram/mem_reg/ADDRBWRADDR[12]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.371ns  (logic 0.141ns (38.032%)  route 0.230ns (61.968%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.497ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.562     1.445    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X57Y86         FDRE                                         r  u_enc/u_qpp/addr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y86         FDRE (Prop_fdre_C_Q)         0.141     1.586 r  u_enc/u_qpp/addr_reg[11]/Q
+                         net (fo=3, routed)           0.230     1.816    u_enc/u_ram/Q[11]
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/ADDRBWRADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.872     2.000    u_enc/u_ram/clk_IBUF_BUFG
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/CLKBWRCLK
+                         clock pessimism             -0.497     1.503    <hidden>
+    RAMB18_X2Y34         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[12])
+                                                      0.183     1.686    u_enc/u_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         -1.686    <hidden>
+                         arrival time                           1.816    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.130    <hidden>
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 lfsr_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lfsr_reg[13]/D
+                            (rising edge-triggered cell FDSE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.192ns  (logic 0.141ns (73.465%)  route 0.051ns (26.535%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.990ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.592     1.475    clk_IBUF_BUFG
+    SLICE_X62Y90         FDRE                                         r  lfsr_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y90         FDRE (Prop_fdre_C_Q)         0.141     1.616 r  lfsr_reg[14]/Q
+                         net (fo=1, routed)           0.051     1.667    lfsr__0[14]
+    SLICE_X63Y90         FDSE                                         r  lfsr_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.862     1.990    clk_IBUF_BUFG
+    SLICE_X63Y90         FDSE                                         r  lfsr_reg[13]/C
+                         clock pessimism             -0.502     1.488    <hidden>
+    SLICE_X63Y90         FDSE (Hold_fdse_C_D)         0.047     1.535    lfsr_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.535    <hidden>
+                         arrival time                           1.667    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.132    <hidden>
+
+Slack (MET) :             0.142ns  (arrival time - required time)
+  Source:                 u_enc/u_enc1/s0_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_enc1/s1_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.217ns  (logic 0.141ns (64.847%)  route 0.076ns (35.153%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.980ns
+    Source Clock Delay      (SCD):    1.468ns
+    Clock Pessimism Removal (CPR):    0.512ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.585     1.468    u_enc/u_enc1/clk_IBUF_BUFG
+    SLICE_X58Y81         FDRE                                         r  u_enc/u_enc1/s0_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y81         FDRE (Prop_fdre_C_Q)         0.141     1.609 r  u_enc/u_enc1/s0_reg/Q
+                         net (fo=4, routed)           0.076     1.686    u_enc/u_enc1/st1[2]
+    SLICE_X58Y81         FDRE                                         r  u_enc/u_enc1/s1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.853     1.980    u_enc/u_enc1/clk_IBUF_BUFG
+    SLICE_X58Y81         FDRE                                         r  u_enc/u_enc1/s1_reg/C
+                         clock pessimism             -0.512     1.468    <hidden>
+    SLICE_X58Y81         FDRE (Hold_fdre_C_D)         0.075     1.543    u_enc/u_enc1/s1_reg
+  -------------------------------------------------------------------
+                         required time                         -1.543    <hidden>
+                         arrival time                           1.686    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.142    <hidden>
+
+Slack (MET) :             0.151ns  (arrival time - required time)
+  Source:                 por_cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            por_cnt_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.284ns  (logic 0.186ns (65.492%)  route 0.098ns (34.508%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.954ns
+    Source Clock Delay      (SCD):    1.441ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.558     1.441    clk_IBUF_BUFG
+    SLICE_X53Y82         FDRE                                         r  por_cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y82         FDRE (Prop_fdre_C_Q)         0.141     1.582 r  por_cnt_reg[1]/Q
+                         net (fo=6, routed)           0.098     1.680    por_cnt_reg[1]
+    SLICE_X52Y82         LUT4 (Prop_lut4_I2_O)        0.045     1.725 r  por_cnt[3]_i_1/O
+                         net (fo=1, routed)           0.000     1.725    por_cnt[3]_i_1_n_0
+    SLICE_X52Y82         FDRE                                         r  por_cnt_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.826     1.954    clk_IBUF_BUFG
+    SLICE_X52Y82         FDRE                                         r  por_cnt_reg[3]/C
+                         clock pessimism             -0.500     1.454    <hidden>
+    SLICE_X52Y82         FDRE (Hold_fdre_C_D)         0.120     1.574    por_cnt_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.574    <hidden>
+                         arrival time                           1.725    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.151    <hidden>
+
+Slack (MET) :             0.157ns  (arrival time - required time)
+  Source:                 lfsr_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lfsr_reg[29]/D
+                            (rising edge-triggered cell FDSE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.227ns  (logic 0.141ns (62.202%)  route 0.086ns (37.798%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.985ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.589     1.472    clk_IBUF_BUFG
+    SLICE_X58Y87         FDRE                                         r  lfsr_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y87         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  lfsr_reg[30]/Q
+                         net (fo=1, routed)           0.086     1.699    lfsr__0[30]
+    SLICE_X59Y87         FDSE                                         r  lfsr_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.858     1.985    clk_IBUF_BUFG
+    SLICE_X59Y87         FDSE                                         r  lfsr_reg[29]/C
+                         clock pessimism             -0.500     1.485    <hidden>
+    SLICE_X59Y87         FDSE (Hold_fdse_C_D)         0.057     1.542    lfsr_reg[29]
+  -------------------------------------------------------------------
+                         required time                         -1.542    <hidden>
+                         arrival time                           1.699    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.157    <hidden>
+
+Slack (MET) :             0.164ns  (arrival time - required time)
+  Source:                 u_enc/u_qpp/addr_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_ram/mem_reg/ADDRBWRADDR[13]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.351ns  (logic 0.128ns (36.424%)  route 0.223ns (63.576%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.497ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.562     1.445    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X57Y86         FDRE                                         r  u_enc/u_qpp/addr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y86         FDRE (Prop_fdre_C_Q)         0.128     1.573 r  u_enc/u_qpp/addr_reg[12]/Q
+                         net (fo=3, routed)           0.223     1.797    u_enc/u_ram/Q[12]
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/ADDRBWRADDR[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.872     2.000    u_enc/u_ram/clk_IBUF_BUFG
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/CLKBWRCLK
+                         clock pessimism             -0.497     1.503    <hidden>
+    RAMB18_X2Y34         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[13])
+                                                      0.130     1.633    u_enc/u_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         -1.633    <hidden>
+                         arrival time                           1.797    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.164    <hidden>
+
+Slack (MET) :             0.171ns  (arrival time - required time)
+  Source:                 u_enc/u_qpp/addr_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_enc/u_ram/mem_reg/ADDRBWRADDR[8]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.411ns  (logic 0.141ns (34.281%)  route 0.270ns (65.719%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.497ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.562     1.445    u_enc/u_qpp/clk_IBUF_BUFG
+    SLICE_X57Y86         FDRE                                         r  u_enc/u_qpp/addr_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y86         FDRE (Prop_fdre_C_Q)         0.141     1.586 r  u_enc/u_qpp/addr_reg[7]/Q
+                         net (fo=3, routed)           0.270     1.857    u_enc/u_ram/Q[7]
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.872     2.000    u_enc/u_ram/clk_IBUF_BUFG
+    RAMB18_X2Y34         RAMB18E1                                     r  u_enc/u_ram/mem_reg/CLKBWRCLK
+                         clock pessimism             -0.497     1.503    <hidden>
+    RAMB18_X2Y34         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[8])
+                                                      0.183     1.686    u_enc/u_ram/mem_reg
+  -------------------------------------------------------------------
+                         required time                         -1.686    <hidden>
+                         arrival time                           1.857    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.171    <hidden>
+
+Slack (MET) :             0.180ns  (arrival time - required time)
+  Source:                 lfsr_reg[10]/C
+                            (rising edge-triggered cell FDSE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lfsr_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.753%)  route 0.117ns (45.247%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.990ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.592     1.475    clk_IBUF_BUFG
+    SLICE_X62Y90         FDSE                                         r  lfsr_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y90         FDSE (Prop_fdse_C_Q)         0.141     1.616 r  lfsr_reg[10]/Q
+                         net (fo=1, routed)           0.117     1.733    lfsr__0[10]
+    SLICE_X62Y90         FDRE                                         r  lfsr_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.862     1.990    clk_IBUF_BUFG
+    SLICE_X62Y90         FDRE                                         r  lfsr_reg[9]/C
+                         clock pessimism             -0.515     1.475    <hidden>
+    SLICE_X62Y90         FDRE (Hold_fdre_C_D)         0.078     1.553    lfsr_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -1.553    <hidden>
+                         arrival time                           1.733    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.180    <hidden>
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X2Y34   u_enc/u_ram/mem_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X2Y34   u_enc/u_ram/mem_reg/CLKBWRCLK
+Min Period        n/a     BUFG/I              n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X56Y77   done_l_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X54Y80   err_l_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X61Y87   lfsr_reg[0]/C
+Min Period        n/a     FDSE/C              n/a            1.000         10.000      9.000      SLICE_X62Y90   lfsr_reg[10]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X63Y90   lfsr_reg[11]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X63Y90   lfsr_reg[12]/C
+Min Period        n/a     FDSE/C              n/a            1.000         10.000      9.000      SLICE_X63Y90   lfsr_reg[13]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X56Y77   done_l_reg/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X56Y77   done_l_reg/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y80   err_l_reg/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y80   err_l_reg/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X61Y87   lfsr_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X61Y87   lfsr_reg[0]/C
+Low Pulse Width   Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X62Y90   lfsr_reg[10]/C
+Low Pulse Width   Fast    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X62Y90   lfsr_reg[10]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X63Y90   lfsr_reg[11]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X63Y90   lfsr_reg[11]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X56Y77   done_l_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X56Y77   done_l_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y80   err_l_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y80   err_l_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X61Y87   lfsr_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X61Y87   lfsr_reg[0]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X62Y90   lfsr_reg[10]/C
+High Pulse Width  Fast    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X62Y90   lfsr_reg[10]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X63Y90   lfsr_reg[11]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X63Y90   lfsr_reg[11]/C
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  sys_clk_pin
+  To Clock:  
+
+Max Delay            16 Endpoints
+Min Delay            16 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_enc/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.024ns  (logic 4.419ns (40.082%)  route 6.606ns (59.918%))
+  Logic Levels:           2  (LUT3=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.550     5.071    u_enc/clk_IBUF_BUFG
+    SLICE_X55Y82         FDRE                                         r  u_enc/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y82         FDRE (Prop_fdre_C_Q)         0.419     5.490 r  u_enc/FSM_sequential_state_reg[2]/Q
+                         net (fo=48, routed)          0.986     6.475    u_enc/state[2]
+    SLICE_X54Y80         LUT3 (Prop_lut3_I0_O)        0.291     6.766 r  u_enc/led_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           5.620    12.386    led_OBUF[0]
+    U16                  OBUF (Prop_obuf_I_O)         3.709    16.095 r  led_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    16.095    led[0]
+    U16                                                               r  led[0]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[2]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.786ns  (logic 3.962ns (40.487%)  route 5.824ns (59.513%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.605     5.126    clk_IBUF_BUFG
+    SLICE_X58Y75         FDRE                                         r  sig_reg[2]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y75         FDRE (Prop_fdre_C_Q)         0.456     5.582 r  sig_reg[2]_lopt_replica/Q
+                         net (fo=1, routed)           5.824    11.406    sig_reg[2]_lopt_replica_1
+    U14                  OBUF (Prop_obuf_I_O)         3.506    14.912 r  led_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    14.912    led[6]
+    U14                                                               r  led[6]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[4]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.713ns  (logic 3.960ns (40.769%)  route 5.753ns (59.231%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.609     5.130    clk_IBUF_BUFG
+    SLICE_X62Y77         FDRE                                         r  sig_reg[4]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y77         FDRE (Prop_fdre_C_Q)         0.456     5.586 r  sig_reg[4]_lopt_replica/Q
+                         net (fo=1, routed)           5.753    11.339    sig_reg[4]_lopt_replica_1
+    V13                  OBUF (Prop_obuf_I_O)         3.504    14.843 r  led_OBUF[8]_inst/O
+                         net (fo=0)                   0.000    14.843    led[8]
+    V13                                                               r  led[8]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[1]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.248ns  (logic 3.970ns (42.932%)  route 5.278ns (57.068%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.611     5.132    clk_IBUF_BUFG
+    SLICE_X58Y78         FDRE                                         r  sig_reg[1]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y78         FDRE (Prop_fdre_C_Q)         0.456     5.588 r  sig_reg[1]_lopt_replica/Q
+                         net (fo=1, routed)           5.278    10.866    sig_reg[1]_lopt_replica_1
+    U15                  OBUF (Prop_obuf_I_O)         3.514    14.380 r  led_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    14.380    led[5]
+    U15                                                               r  led[5]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[3]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.199ns  (logic 3.957ns (43.014%)  route 5.242ns (56.986%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.606     5.127    clk_IBUF_BUFG
+    SLICE_X63Y75         FDRE                                         r  sig_reg[3]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y75         FDRE (Prop_fdre_C_Q)         0.456     5.583 r  sig_reg[3]_lopt_replica/Q
+                         net (fo=1, routed)           5.242    10.825    sig_reg[3]_lopt_replica_1
+    V14                  OBUF (Prop_obuf_I_O)         3.501    14.325 r  led_OBUF[7]_inst/O
+                         net (fo=0)                   0.000    14.325    led[7]
+    V14                                                               r  led[7]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[0]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.089ns  (logic 3.965ns (43.621%)  route 5.124ns (56.379%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.605     5.126    clk_IBUF_BUFG
+    SLICE_X58Y75         FDRE                                         r  sig_reg[0]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y75         FDRE (Prop_fdre_C_Q)         0.456     5.582 r  sig_reg[0]_lopt_replica/Q
+                         net (fo=1, routed)           5.124    10.706    sig_reg[0]_lopt_replica_1
+    W18                  OBUF (Prop_obuf_I_O)         3.509    14.215 r  led_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    14.215    led[4]
+    W18                                                               r  led[4]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 err_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.025ns  (logic 4.019ns (44.533%)  route 5.006ns (55.467%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.547     5.068    clk_IBUF_BUFG
+    SLICE_X54Y80         FDRE                                         r  err_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y80         FDRE (Prop_fdre_C_Q)         0.518     5.586 r  err_l_reg/Q
+                         net (fo=1, routed)           5.006    10.592    led_OBUF[2]
+    U19                  OBUF (Prop_obuf_I_O)         3.501    14.092 r  led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    14.092    led[2]
+    U19                                                               r  led[2]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 term_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.907ns  (logic 4.027ns (45.212%)  route 4.880ns (54.788%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.542     5.063    clk_IBUF_BUFG
+    SLICE_X56Y77         FDRE                                         r  term_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y77         FDRE (Prop_fdre_C_Q)         0.518     5.581 r  term_l_reg/Q
+                         net (fo=1, routed)           4.880    10.461    led_OBUF[3]
+    V19                  OBUF (Prop_obuf_I_O)         3.509    13.970 r  led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    13.970    led[3]
+    V19                                                               r  led[3]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 done_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.185ns  (logic 4.048ns (49.451%)  route 4.138ns (50.549%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.542     5.063    clk_IBUF_BUFG
+    SLICE_X56Y77         FDRE                                         r  done_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y77         FDRE (Prop_fdre_C_Q)         0.518     5.581 r  done_l_reg/Q
+                         net (fo=1, routed)           4.138     9.718    led_OBUF[1]
+    E19                  OBUF (Prop_obuf_I_O)         3.530    13.248 r  led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    13.248    led[1]
+    E19                                                               r  led[1]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[5]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.237ns  (logic 4.102ns (56.688%)  route 3.134ns (43.312%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.609     5.130    clk_IBUF_BUFG
+    SLICE_X62Y77         FDRE                                         r  sig_reg[5]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y77         FDRE (Prop_fdre_C_Q)         0.419     5.549 r  sig_reg[5]_lopt_replica/Q
+                         net (fo=1, routed)           3.134     8.683    sig_reg[5]_lopt_replica_1
+    V3                   OBUF (Prop_obuf_I_O)         3.683    12.366 r  led_OBUF[9]_inst/O
+                         net (fo=0)                   0.000    12.366    led[9]
+    V3                                                                r  led[9]
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sig_reg[9]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.701ns  (logic 1.372ns (80.710%)  route 0.328ns (19.290%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.580     1.463    clk_IBUF_BUFG
+    SLICE_X64Y75         FDRE                                         r  sig_reg[9]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y75         FDRE (Prop_fdre_C_Q)         0.164     1.627 r  sig_reg[9]_lopt_replica/Q
+                         net (fo=1, routed)           0.328     1.955    sig_reg[9]_lopt_replica_1
+    N3                   OBUF (Prop_obuf_I_O)         1.208     3.164 r  led_OBUF[13]_inst/O
+                         net (fo=0)                   0.000     3.164    led[13]
+    N3                                                                r  led[13]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[8]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[12]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.739ns  (logic 1.360ns (78.208%)  route 0.379ns (21.792%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.580     1.463    clk_IBUF_BUFG
+    SLICE_X62Y75         FDRE                                         r  sig_reg[8]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y75         FDRE (Prop_fdre_C_Q)         0.141     1.604 r  sig_reg[8]_lopt_replica/Q
+                         net (fo=1, routed)           0.379     1.983    sig_reg[8]_lopt_replica_1
+    P3                   OBUF (Prop_obuf_I_O)         1.219     3.202 r  led_OBUF[12]_inst/O
+                         net (fo=0)                   0.000     3.202    led[12]
+    P3                                                                r  led[12]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.847ns  (logic 1.386ns (75.050%)  route 0.461ns (24.950%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.584     1.467    clk_IBUF_BUFG
+    SLICE_X64Y79         FDRE                                         r  sig_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y79         FDRE (Prop_fdre_C_Q)         0.164     1.631 r  sig_reg[11]/Q
+                         net (fo=6, routed)           0.461     2.092    led_OBUF[15]
+    L1                   OBUF (Prop_obuf_I_O)         1.222     3.315 r  led_OBUF[15]_inst/O
+                         net (fo=0)                   0.000     3.315    led[15]
+    L1                                                                r  led[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[10]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.947ns  (logic 1.380ns (70.889%)  route 0.567ns (29.111%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.584     1.467    clk_IBUF_BUFG
+    SLICE_X64Y79         FDRE                                         r  sig_reg[10]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y79         FDRE (Prop_fdre_C_Q)         0.164     1.631 r  sig_reg[10]_lopt_replica/Q
+                         net (fo=1, routed)           0.567     2.198    sig_reg[10]_lopt_replica_1
+    P1                   OBUF (Prop_obuf_I_O)         1.216     3.415 r  led_OBUF[14]_inst/O
+                         net (fo=0)                   0.000     3.415    led[14]
+    P1                                                                r  led[14]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[6]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.251ns  (logic 1.407ns (62.516%)  route 0.844ns (37.484%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.583     1.466    clk_IBUF_BUFG
+    SLICE_X62Y77         FDRE                                         r  sig_reg[6]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y77         FDRE (Prop_fdre_C_Q)         0.128     1.594 r  sig_reg[6]_lopt_replica/Q
+                         net (fo=1, routed)           0.844     2.438    sig_reg[6]_lopt_replica_1
+    W3                   OBUF (Prop_obuf_I_O)         1.279     3.717 r  led_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     3.717    led[10]
+    W3                                                                r  led[10]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[7]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.304ns  (logic 1.346ns (58.427%)  route 0.958ns (41.574%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.580     1.463    clk_IBUF_BUFG
+    SLICE_X62Y75         FDRE                                         r  sig_reg[7]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y75         FDRE (Prop_fdre_C_Q)         0.141     1.604 r  sig_reg[7]_lopt_replica/Q
+                         net (fo=1, routed)           0.958     2.562    sig_reg[7]_lopt_replica_1
+    U3                   OBUF (Prop_obuf_I_O)         1.205     3.767 r  led_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     3.767    led[11]
+    U3                                                                r  led[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sig_reg[5]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.371ns  (logic 1.391ns (58.691%)  route 0.979ns (41.309%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.583     1.466    clk_IBUF_BUFG
+    SLICE_X62Y77         FDRE                                         r  sig_reg[5]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y77         FDRE (Prop_fdre_C_Q)         0.128     1.594 r  sig_reg[5]_lopt_replica/Q
+                         net (fo=1, routed)           0.979     2.574    sig_reg[5]_lopt_replica_1
+    V3                   OBUF (Prop_obuf_I_O)         1.263     3.837 r  led_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     3.837    led[9]
+    V3                                                                r  led[9]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 done_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.957ns  (logic 1.395ns (47.160%)  route 1.563ns (52.840%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.556     1.439    clk_IBUF_BUFG
+    SLICE_X56Y77         FDRE                                         r  done_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y77         FDRE (Prop_fdre_C_Q)         0.164     1.603 r  done_l_reg/Q
+                         net (fo=1, routed)           1.563     3.166    led_OBUF[1]
+    E19                  OBUF (Prop_obuf_I_O)         1.231     4.396 r  led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     4.396    led[1]
+    E19                                                               r  led[1]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 term_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.191ns  (logic 1.374ns (43.061%)  route 1.817ns (56.939%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.556     1.439    clk_IBUF_BUFG
+    SLICE_X56Y77         FDRE                                         r  term_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y77         FDRE (Prop_fdre_C_Q)         0.164     1.603 r  term_l_reg/Q
+                         net (fo=1, routed)           1.817     3.420    led_OBUF[3]
+    V19                  OBUF (Prop_obuf_I_O)         1.210     4.630 r  led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     4.630    led[3]
+    V19                                                               r  led[3]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 err_l_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.333ns  (logic 1.366ns (40.991%)  route 1.967ns (59.009%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.556     1.439    clk_IBUF_BUFG
+    SLICE_X54Y80         FDRE                                         r  err_l_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y80         FDRE (Prop_fdre_C_Q)         0.164     1.603 r  err_l_reg/Q
+                         net (fo=1, routed)           1.967     3.570    led_OBUF[2]
+    U19                  OBUF (Prop_obuf_I_O)         1.202     4.772 r  led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     4.772    led[2]
+    U19                                                               r  led[2]
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  sys_clk_pin
+
+Max Delay             5 Endpoints
+Min Delay             5 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sw[0]
+                            (input port)
+  Destination:            sw_m_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.880ns  (logic 1.453ns (24.707%)  route 4.427ns (75.293%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.766ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.766ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V17                                               0.000     0.000 r  sw[0]
+                         net (fo=0)                   0.000     0.000    sw[0]
+    V17                  IBUF (Prop_ibuf_I_O)         1.453     1.453 r  sw_IBUF[0]_inst/O
+                         net (fo=1, routed)           4.427     5.880    sw_IBUF[0]
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862     3.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.425     4.766    clk_IBUF_BUFG
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[0]/C
+
+Slack:                    inf
+  Source:                 sw[2]
+                            (input port)
+  Destination:            sw_m_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.866ns  (logic 1.464ns (24.953%)  route 4.402ns (75.047%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.766ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.766ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W16                                               0.000     0.000 r  sw[2]
+                         net (fo=0)                   0.000     0.000    sw[2]
+    W16                  IBUF (Prop_ibuf_I_O)         1.464     1.464 r  sw_IBUF[2]_inst/O
+                         net (fo=1, routed)           4.402     5.866    sw_IBUF[2]
+    SLICE_X54Y75         FDRE                                         r  sw_m_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862     3.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.425     4.766    clk_IBUF_BUFG
+    SLICE_X54Y75         FDRE                                         r  sw_m_reg[2]/C
+
+Slack:                    inf
+  Source:                 btn_start
+                            (input port)
+  Destination:            u_db_start/sync1_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.792ns  (logic 1.441ns (24.883%)  route 4.351ns (75.117%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.835ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.835ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U18                                               0.000     0.000 r  btn_start
+                         net (fo=0)                   0.000     0.000    btn_start
+    U18                  IBUF (Prop_ibuf_I_O)         1.441     1.441 r  btn_start_IBUF_inst/O
+                         net (fo=1, routed)           4.351     5.792    u_db_start/btn_start_IBUF
+    SLICE_X58Y77         FDRE                                         r  u_db_start/sync1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862     3.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.494     4.835    u_db_start/clk_IBUF_BUFG
+    SLICE_X58Y77         FDRE                                         r  u_db_start/sync1_reg/C
+
+Slack:                    inf
+  Source:                 sw[1]
+                            (input port)
+  Destination:            sw_m_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.532ns  (logic 1.461ns (26.416%)  route 4.071ns (73.584%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.766ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.766ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V16                                               0.000     0.000 r  sw[1]
+                         net (fo=0)                   0.000     0.000    sw[1]
+    V16                  IBUF (Prop_ibuf_I_O)         1.461     1.461 r  sw_IBUF[1]_inst/O
+                         net (fo=1, routed)           4.071     5.532    sw_IBUF[1]
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862     3.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.425     4.766    clk_IBUF_BUFG
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[1]/C
+
+Slack:                    inf
+  Source:                 btn_rst
+                            (input port)
+  Destination:            u_db_rst/sync1_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.525ns  (logic 1.454ns (26.313%)  route 4.071ns (73.687%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.771ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.771ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T18                                               0.000     0.000 r  btn_rst
+                         net (fo=0)                   0.000     0.000    btn_rst
+    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  btn_rst_IBUF_inst/O
+                         net (fo=1, routed)           4.071     5.525    u_db_rst/btn_rst_IBUF
+    SLICE_X54Y78         FDRE                                         r  u_db_rst/sync1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862     3.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         1.430     4.771    u_db_rst/clk_IBUF_BUFG
+    SLICE_X54Y78         FDRE                                         r  u_db_rst/sync1_reg/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 btn_rst
+                            (input port)
+  Destination:            u_db_rst/sync1_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        2.062ns  (logic 0.222ns (10.760%)  route 1.840ns (89.240%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.950ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.950ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T18                                               0.000     0.000 r  btn_rst
+                         net (fo=0)                   0.000     0.000    btn_rst
+    T18                  IBUF (Prop_ibuf_I_O)         0.222     0.222 r  btn_rst_IBUF_inst/O
+                         net (fo=1, routed)           1.840     2.062    u_db_rst/btn_rst_IBUF
+    SLICE_X54Y78         FDRE                                         r  u_db_rst/sync1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.822     1.950    u_db_rst/clk_IBUF_BUFG
+    SLICE_X54Y78         FDRE                                         r  u_db_rst/sync1_reg/C
+
+Slack:                    inf
+  Source:                 sw[1]
+                            (input port)
+  Destination:            sw_m_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        2.072ns  (logic 0.229ns (11.070%)  route 1.843ns (88.930%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.946ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.946ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V16                                               0.000     0.000 r  sw[1]
+                         net (fo=0)                   0.000     0.000    sw[1]
+    V16                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  sw_IBUF[1]_inst/O
+                         net (fo=1, routed)           1.843     2.072    sw_IBUF[1]
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.818     1.946    clk_IBUF_BUFG
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[1]/C
+
+Slack:                    inf
+  Source:                 sw[2]
+                            (input port)
+  Destination:            sw_m_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        2.273ns  (logic 0.232ns (10.197%)  route 2.041ns (89.803%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.946ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.946ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W16                                               0.000     0.000 r  sw[2]
+                         net (fo=0)                   0.000     0.000    sw[2]
+    W16                  IBUF (Prop_ibuf_I_O)         0.232     0.232 r  sw_IBUF[2]_inst/O
+                         net (fo=1, routed)           2.041     2.273    sw_IBUF[2]
+    SLICE_X54Y75         FDRE                                         r  sw_m_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.818     1.946    clk_IBUF_BUFG
+    SLICE_X54Y75         FDRE                                         r  sw_m_reg[2]/C
+
+Slack:                    inf
+  Source:                 btn_start
+                            (input port)
+  Destination:            u_db_start/sync1_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        2.285ns  (logic 0.210ns (9.171%)  route 2.075ns (90.829%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.976ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U18                                               0.000     0.000 r  btn_start
+                         net (fo=0)                   0.000     0.000    btn_start
+    U18                  IBUF (Prop_ibuf_I_O)         0.210     0.210 r  btn_start_IBUF_inst/O
+                         net (fo=1, routed)           2.075     2.285    u_db_start/btn_start_IBUF
+    SLICE_X58Y77         FDRE                                         r  u_db_start/sync1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.849     1.976    u_db_start/clk_IBUF_BUFG
+    SLICE_X58Y77         FDRE                                         r  u_db_start/sync1_reg/C
+
+Slack:                    inf
+  Source:                 sw[0]
+                            (input port)
+  Destination:            sw_m_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        2.289ns  (logic 0.221ns (9.652%)  route 2.068ns (90.348%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.946ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.946ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V17                                               0.000     0.000 r  sw[0]
+                         net (fo=0)                   0.000     0.000    sw[0]
+    V17                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  sw_IBUF[0]_inst/O
+                         net (fo=1, routed)           2.068     2.289    sw_IBUF[0]
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    W5                                                0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=220, routed)         0.818     1.946    clk_IBUF_BUFG
+    SLICE_X55Y75         FDRE                                         r  sw_m_reg[0]/C
+
+
+
+
+

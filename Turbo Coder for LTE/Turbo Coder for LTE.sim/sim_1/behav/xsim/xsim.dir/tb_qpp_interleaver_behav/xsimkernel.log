@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_qpp_interleaver_behav/xsimk.exe -simmode gui -wdb tb_qpp_interleaver_behav.wdb -simrunnum 0 -socket 53278
+Design successfully loaded
+Design Loading Memory Usage: 18936 KB (Peak: 18936 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 19508 KB (Peak: 19508 KB)
+Simulation CPU Usage: 108 ms

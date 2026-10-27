@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1792911318">
+  <File Type="PA-TCL" Name="turbo_demo_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="turbo_demo_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="turbo_demo_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="turbo_demo_top.vds"/>
+  <File Type="RDS-UTIL" Name="turbo_demo_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="turbo_demo_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="turbo_demo_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="turbo_demo_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="turbo_demo_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/btn_debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/btn_debounce.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/qpp_interleaver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/qpp_interleaver.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/qpp_param_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/qpp_param_rom.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/rsc_encoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/rsc_encoder.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/turbo_bit_ram.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/turbo_bit_ram.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/turbo_encoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/turbo_encoder.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/turbo_demo_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/turbo_demo_top.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/sdp_ram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/sdp_ram.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/siso_decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/siso_decoder.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/turbo_decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/rtl/turbo_decoder.v"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="turbo_demo_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/basys3_turbo_demo.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../turbo_lte_vivado/turbo_lte_vivado/constraints/basys3_turbo_demo.xdc"/>
+        <Attr Name="ImportTime" Val="1792884962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2026">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

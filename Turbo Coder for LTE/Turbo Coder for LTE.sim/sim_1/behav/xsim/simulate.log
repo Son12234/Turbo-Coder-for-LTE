@@ -1,0 +1,20 @@
+Time resolution is 1 ps
+=== TB rsc_encoder: bat dau ===
+[PASS] trang thai ban dau = 000
+[PASS] dap ung xung khop chuoi tinh tay (z = 111100101110010)
+[PASS] en=0 giu nguyen trang thai (100)
+[PASS] clr dua trang thai ve 000
+[INFO] 2000 bit ngau nhien da so voi mo hinh, tong loi hien tai = 0
+[PASS] ket thuc trellis tu trang thai 000 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 101 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 010 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 111 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 100 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 001 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 110 ve 000 sau 3 nhip
+[PASS] ket thuc trellis tu trang thai 011 ve 000 sau 3 nhip
+[INFO] 60 chuoi ngau nhien da kiem tra ket thuc trellis, tong loi hien tai = 0
+[PASS] reset dong bo xoa trang thai ve 000
+=== Tong ket: 15 ca thu, 0 loi ===
+TEST PASSED
+$finish called at time : 42280 ns : File "C:/Users/admin/Downloads/Project_Vivado/Turbo Coder for LTE/Turbo Coder for LTE.srcs/sim_1/imports/sim/tb_rsc_encoder.v" Line 180
